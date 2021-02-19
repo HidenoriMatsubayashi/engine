@@ -640,6 +640,15 @@ hooks = [
       '--arch=arm64'],
   },
   {
+    'name': 'linux_sysroot_arm',
+    'pattern': '.',
+    'condition': 'download_linux_deps',
+    'action': [
+      'python',
+      'src/build/linux/sysroot_scripts/install-sysroot.py',
+      '--arch=arm'],
+  },
+  {
     'name': 'dart package config',
     'pattern': '.',
     'action': [
